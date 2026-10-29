@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<virtual_stage>
+  <real_axes>
+    <coarse>
+      <axis var="SN"  tango="i12-m-cx1/ex/sample-mt_sn"/>
+      <axis var="ST"  tango="i12-m-cx1/ex/sample-mt_st"/>
+      <axis var="SZ"  tango="i12-m-cx1/ex/sample-mt_sz"/>
+      <axis var="SRZ" tango="i12-m-cx1/ex/sample-mt_srz"/>
+      <axis var="SRN" tango="i12-m-cx1/ex/sample-mt_srn"/>
+    </coarse>
+    <fine>
+      <tango_parser_device>i12-m-cx1/ex/PI</tango_parser_device>
+      <axis var="PIX" input_name="X"/>
+      <axis var="PIY" input_name="Y"/>
+      <axis var="PIZ" input_name="Z"/>
+    </fine>
+  </real_axes>
+
+  <virtual_axes>
+    <axis var="SAN"/>
+    <axis var="SAT"/>
+    <axis var="SAS"/>
+    <axis var="SAZ"/>
+    <axis var="SAFT"/>
+    <axis var="SAFN"/>
+    <axis var="SAFZ"/>
+  </virtual_axes>
+
+  <geometry>
+    <alpha_degrees>0.0</alpha_degrees>
+    <srz0_degrees>0.0</srz0_degrees>
+    <srn0_degrees>120.0</srn0_degrees>
+  </geometry>
+
+  <defaults>
+    <input_limits var="SAN" min="-1"  max="1"/>
+    <input_limits var="SAT" min="-10" max="10"/>
+    <input_limits var="SAS" min="-1"  max="1"/>
+    <input_limits var="SAZ" min="25"  max="55"/>
+  </defaults>
+
+  <offsets>
+    <offset var="SAN">0.0</offset>
+    <offset var="SAT">0.0</offset>
+    <offset var="SAS">0.0</offset>
+    <offset var="SAZ">0.0</offset>
+    <offset var="SAFT">0.0</offset>
+    <offset var="SAFN">0.0</offset>
+    <offset var="SAFZ">0.0</offset>
+  </offsets>
+</virtual_stage>
